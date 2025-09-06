@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitab Junction - Buy, Sell & Rent Books</title>
+    <meta name="description" content="Affordable second-hand books for students. Buy, sell, and rent textbooks and self-help books.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased bg-background text-foreground">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary">Kitab Junction</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="buy.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Buy</a>
+                        <a href="sell.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Sell</a>
+                        <a href="rent.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Rent</a>
+                        <a href="about.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-foreground hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="buy.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Buy</a>
+                <a href="sell.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Sell</a>
+                <a href="rent.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Rent</a>
+                <a href="about.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-16 min-h-screen flex items-center bg-gradient-to-br from-emerald-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-6 animate-fade-in">
+                    Welcome to <span class="text-primary">Kitab Junction</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in delay-200">
+                    Your one-stop destination for affordable second-hand books. Buy, sell, and rent textbooks and self-help books for students.
+                </p>
+                
+                <!-- Action Cards -->
+                <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <a href="buy.html" class="group bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in delay-300">
+                        <div class="text-4xl mb-4">📚</div>
+                        <h3 class="text-2xl font-bold text-foreground mb-2">Buy Books</h3>
+                        <p class="text-muted-foreground">Find affordable textbooks and self-help books</p>
+                    </a>
+                    
+                    <a href="sell.html" class="group bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in delay-400">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h3 class="text-2xl font-bold text-foreground mb-2">Sell Books</h3>
+                        <p class="text-muted-foreground">Turn your old books into cash</p>
+                    </a>
+                    
+                    <a href="rent.html" class="group bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 animate-fade-in delay-500">
+                        <div class="text-4xl mb-4">📖</div>
+                        <h3 class="text-2xl font-bold text-foreground mb-2">Rent Books</h3>
+                        <p class="text-muted-foreground">Rent books for short-term use</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Carousel -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-foreground mb-12">Featured Books</h2>
+            
+            <div class="relative overflow-hidden">
+                <div id="book-carousel" class="flex space-x-6 animate-scroll">
+                    <!-- Book cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-emerald-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-8">About Kitab Junction</h2>
+            <p class="text-lg text-muted-foreground mb-8">
+                We believe education should be accessible to everyone. Our platform connects students to buy, sell, and rent affordable second-hand books, making quality education more affordable.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">10,000+</div>
+                    <p class="text-muted-foreground">Books Available</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">5,000+</div>
+                    <p class="text-muted-foreground">Happy Students</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">50%</div>
+                    <p class="text-muted-foreground">Average Savings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-foreground mb-8">Get in Touch</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <div class="space-y-2 text-muted-foreground">
+                        <p>📞 +91 9555417732</p>
+                        <p>📧 kitabjunction@gmail.com</p>
+                        <p>📍 New Delhi, India</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Follow Us</h3>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="text-primary hover:text-secondary transition-colors">Facebook</a>
+                        <a href="#" class="text-primary hover:text-secondary transition-colors">Instagram</a>
+                        <a href="#" class="text-primary hover:text-secondary transition-colors">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

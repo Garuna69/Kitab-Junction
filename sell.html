@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Books - Kitab Junction</title>
+    <meta name="description" content="Sell your old textbooks and self-help books to other students.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased bg-background text-foreground">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-2xl font-bold text-primary">Kitab Junction</a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="index.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="buy.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Buy</a>
+                        <a href="sell.html" class="text-primary px-3 py-2 rounded-md text-sm font-medium">Sell</a>
+                        <a href="rent.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Rent</a>
+                        <a href="about.html" class="text-foreground hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-foreground hover:text-primary p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="buy.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Buy</a>
+                <a href="sell.html" class="text-primary block px-3 py-2 rounded-md text-base font-medium">Sell</a>
+                <a href="rent.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Rent</a>
+                <a href="about.html" class="text-foreground hover:text-primary block px-3 py-2 rounded-md text-base font-medium">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sell Page Content -->
+    <main class="pt-16 min-h-screen bg-gradient-to-br from-emerald-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-foreground mb-4">Sell Your Books</h1>
+                <p class="text-xl text-muted-foreground">Turn your old books into cash</p>
+            </div>
+
+            <!-- Sell Form -->
+            <div class="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-8">
+                <h2 class="text-2xl font-bold text-foreground mb-6">Book Details</h2>
+                <form id="sell-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Seller Name</label>
+                            <input type="text" name="sellerName" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Mobile Number</label>
+                            <input type="tel" name="mobile" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Email</label>
+                        <input type="email" name="email" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Book Class</label>
+                            <select name="bookClass" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select Class</option>
+                                <option value="9">Class 9</option>
+                                <option value="10">Class 10</option>
+                                <option value="11">Class 11</option>
+                                <option value="12">Class 12</option>
+                                <option value="BA">B.A.</option>
+                                <option value="BSc">B.Sc.</option>
+                                <option value="Self-Help">Self-Help</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Medium</label>
+                            <select name="medium" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select Medium</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="English">English</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Book Name</label>
+                        <input type="text" name="bookName" required placeholder="Enter the exact book name" class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Book Condition</label>
+                        <select name="condition" required class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                            <option value="">Select Condition</option>
+                            <option value="Excellent">Excellent (Like New)</option>
+                            <option value="Good">Good (Minor wear)</option>
+                            <option value="Fair">Fair (Some wear, all pages intact)</option>
+                            <option value="Poor">Poor (Heavy wear but usable)</option>
+                        </select>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Actual Price (₹)</label>
+                            <input type="number" name="actualPrice" required placeholder="Original book price" class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Selling Price (₹)</label>
+                            <input type="number" name="sellingPrice" required placeholder="Your selling price" class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Additional Details</label>
+                        <textarea name="details" rows="3" placeholder="Any additional information about the book..." class="w-full px-4 py-2 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-primary text-primary-foreground py-3 px-6 rounded-lg font-semibold hover:bg-secondary transition-colors duration-300">
+                        Submit Book for Sale via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
