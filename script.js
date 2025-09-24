@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "The Art of Being Alone",
       price: "₹299",
-      image: "/api/placeholder/120/160?text=Art+of+Being+Alone",
+      image: "https://5.imimg.com/data5/SELLER/Default/2024/9/451053603/BH/KA/SA/231929105/flipkart-images-7-png-1000x1000.png",
     },
     {
       title: "Rich Dad Poor Dad",
